@@ -1,0 +1,42 @@
+.tt-dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  font-size: 14px;
+  overflow-y: auto;
+  padding: 8px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.tt-suggestion {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.tt-suggestion:hover {
+  background-color: #eee;
+}
+
+.tt-header {
+  font-weight: bold;
+  color: #999;
+}
+
+.tt-footer {
+  font-style: italic;
+  color: #999;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.tt-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 8px;
+}

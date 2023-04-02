@@ -1,0 +1,45 @@
+server:
+  type: default
+  rootPath: /drugs-service
+  applicationContextPath: /
+  adminContextPath: /drugs-service/admin
+  applicationConnectors:
+    - type: http
+      port: 8080
+      responseCookieCompliance: RFC2965
+  adminConnectors:
+    - type: http
+      port: 8081
+      responseCookieCompliance: RFC2965
+
+
+# Database settings.
+database:
+  # the name of the JDBC driver, mysql in our case
+  driverClass: software.aws.rds.jdbc.mysql.Driver
+  # the username
+  user: gadmin_svc
+  # the password
+  password: huc8Nuh)5QN)EB
+  # the JDBC URL; the database is called Network
+  url: jdbc:mysql:aws://drugs-datastore.ctaow84xv9kk.us-east-2.rds.amazonaws.com:3306/drugstore
+  properties:
+    trustServerCertificate: true
+    useSSL: true
+    requireSSL: true
+    autoReconnect: true
+  # Connection pool Settings
+  initialSize: 5
+  minSize: 5
+  maxSize: 35
+
+logging:
+  level: DEBUG
+  loggers:
+    "org.eclipse.jetty":
+      level: INFO
+    "org.apache.http":
+      level: INFO
+  appenders:
+    - type: console
+      logFormat: "%-5p [%d{yyyy-MM-dd HH:mm:ss.SSS}] [id:%X{ID}] %X{USER} %X{COMPANY} %c: %msg%n"
